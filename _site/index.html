@@ -1,0 +1,1827 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=utf-8 />
+  <title>ARCAL RLA 5/051 - EDSS - IAEA</title>
+  <link rel='stylesheet' href='css/mapbox.css' type='text/css' media='screen' />
+  <link rel='stylesheet' href='css/reset.css' type='text/css' media='screen' />
+  <link rel='stylesheet' href='css/jquery-ui-1.8.23.custom.css' type='text/css' media='screen' />
+  <link rel='stylesheet' href='css/style.css' type='text/css' media='screen' />
+  <!--[if IE 7]>
+        <link rel="stylesheet" type="text/css" href="css/IE7.css">
+   <![endif]-->
+  <link rel='stylesheet' href='css/ipad.css' type='text/css' media='only screen and (device-width: 768px)' />
+  <script src='js/libs/mapbox.js'></script>
+  <script src='js/libs/jquery-1.7.1.min.js' type='text/javascript'></script>
+  <script src='js/libs/jquery-ui-1.8.23.custom.min.js' type='text/javascript'></script>
+  <!--<script src='js/libs/jquery.ui.touch-punch.min.js' type='text/javascript'></script>
+  <script src='js/libs/iscroll.js' type='text/javascript'></script>-->
+  <!--<script src='js/libs/modestmaps.min.js' type='text/javascript'></script>-->
+  <!--<script src='js/libs/easey.js' type='text/javascript'></script>
+  <script src='js/libs/easey.handlers.js' type='text/javascript'></script>-->
+  <script src='js/site.js' type='text/javascript'></script>
+  <link href='http://fonts.googleapis.com/css?family=Cabin:200,400,600' rel='stylesheet' type='text/css'>
+  
+  <script type="text/javascript">var badIE = false;</script>
+  <!--[if IE 7]>
+  <script type="text/javascript">var badIE = true;</script>
+  <![endif]-->
+  <!--[if IE 8]>
+  <script type="text/javascript">var badIE = true;</script>
+  <![endif]-->
+  
+  <script type="text/javascript">
+  // Google Analytics
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-88478-33']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  </script>
+  
+</head>
+
+<body class='no-touch'>
+
+    <div id='map-bg'></div>
+
+  <div id='map'> </div>
+
+  <div id='frieze'></div>
+  <div id='header'> 
+    <a class='title' href='http://arcal.unsl.edu.ar'>ARCAL RLA 5/051</a> 
+    <a class="logo" href="http://www.iaea.org/"></a>
+    <a class='subtitle' href='/'>Decision Support System</a> 
+  </div>
+
+
+  <div id='legend-panel' class='active'>
+    <a class='icon close-legend' href='#'>Close</a>
+  </div>
+
+  <div class="our-data">
+    <p class='explore'><a class='ourdata' href='#'>OUR DATA</a></p>
+  </div>
+  <a class='pull-tab-legend icon' href='#'>Open</a>
+  <a class='icon about' href='#'>About</a>
+  <a class='pull-tab icon' href='#'>Open</a>
+  <div id='side-panel' class='active'>
+    <a class='icon close' href='#'>Close</a>
+    <a class='icon dropdown' href='#'>a</a>
+    <input id="geo-filter" />
+    <span class="explain"> Enter/Select site of interest </span>
+  
+     
+      
+      <span class='site-description VEN-caracas-ref'><p>Coordenadas:</p>
+
+<p>Latitud: 10.496215°</p>
+
+<p>Longitud: -66.895313°</p>
+
+<p>Descripcion:</p>
+
+<p>El Jardín Botánico de Caracas, creado en los años cuarenta, esta ubicado en el Valle de Caracas y ocupa un total aproximado de 70 hectáreas, 10 planas y 60 de colinas. Los terrenos planos del fondo del valle son aluvionales recientes con suelos muy porosos y heterogéneos. Las colinas están constituidas por esquistos y calizas y forman parte de las últimas estribaciones de la Sierra del Interior en su avanzada hacia el Valle de Caracas. La altitud media es de 869 msnm, la temperatura promedio anual, es de 22 ºC, mientras que la precipitación promedio anual alcanza los 925 mm. Fue declarado Parque Nacional, el 12 de noviembre de 1969.</p>
+</span>
+  
+     
+      
+      <span class='site-description VEN-caracas-eros'><p>Coordenadas:</p>
+
+<p>Latitud:  10.496215°</p>
+
+<p>Longitud: -66.895313°</p>
+
+<p>Descripcion:</p>
+
+<p>El Jardín Botánico de Caracas, creado en los años cuarenta, esta ubicado en el Valle de Caracas y ocupa un total aproximado de 70 hectáreas, 10 planas y 60 de colinas. Los terrenos planos del fondo del valle son aluvionales recientes con suelos muy porosos y heterogéneos. Las colinas están constituidas por esquistos y calizas y forman parte de las últimas estribaciones de la Sierra del Interior en su avanzada hacia el Valle de Caracas. La altitud media es de 869 msnm, la temperatura promedio anual, es de 22 ºC, mientras que la precipitación promedio anual alcanza los 925 mm. Fue declarado Parque Nacional, el 12 de noviembre de 1969.</p>
+</span>
+  
+     
+      
+      <span class='site-description VEN-caracas-depo'><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</span>
+  
+     
+      
+      <span class='site-description VEN-caracas'><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</span>
+  
+     
+      
+      <span class='site-description VEN'><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</span>
+  
+     
+      
+      <span class='site-description URY-atlantida-ref'><p>Zona alta cercana a Zona Forestal donde no existe signos de utilizacion de la tierra. Los habitantes locales nos informaron que no recuerdan si alguna vez esa tierra fue utilizada.
+Área total 12 metros X 50 metros (0,06 hectáreas)</p>
+</span>
+  
+     
+      
+      <span class='site-description URY-atlantida-mt'><p>Monte de Eucaliptus de unos 18 años de plantado, se cosecha cada 6 años en promedio.
+Área total: 90 metros X 246 metros (2,2149 hectáreas)
+Zona de estudio 90 m X 110 metros (0,99 hectáreas)</p>
+</span>
+  
+     
+      
+      <span class='site-description URY-atlantida-agr'><p>Zona antiguamente ganadera. Desde hace 15 a 10 años se utilizo con agricultura tradicional (arado), desde hace 10 años a la fecha con siembra directa (principalmente cultivos cerealeros, soja, trigo).
+Área total: 2300 metros X 500 metros (115,0 hectáreas)
+Zona de estudio: 350 metros X 250 metros (8,75 hectáreas)</p>
+</span>
+  
+     
+      
+      <span class='site-description URY-atlantida'><p>ATLANTIDA: Es un lugar cercano a la costa del Río de la Plata, por lo tanto las temperaturas no varían demasiado entre invierno y verano. Típicamente la tierra se utiliza en cultivos de granja (verduras y hortalizas), cereales (soja, trigo) y ganadería.</p>
+</span>
+  
+     
+      
+      <span class='site-description URY'><p>Uruguay tiene una poblacion de 3,25 millones de habitantes con una extension del territorio de 176 215 km², siendo el 1,5% del mismo agua.
+Uruguay esta ubicado totalmente en la zona templada con clasificación climática de Köppen tipo cfa.</p>
+</span>
+  
+     
+      
+      <span class='site-description SLV-la-presa-ref'><p>Sitio de referencia, en las afueras del Caserío y Cantón La Presa, Municipio de el Congo, Departamento de Santa Ana, El Salvador. Las coordenadas son 13°49'16.03"N y  89°30'17.25"O, elevación 636 msnm, pendiente de 2%,no se cultiva,uso potrero.</p>
+</span>
+  
+     
+      
+      <span class='site-description SLV-la-presa-mues'><p>Se obtuvieron tres muestras en el sitio de estudio, la primera a 604 msnm, coordenadas  13°48'41.69"N, 89°30'18.03"O; la segunda a 612 msnm, coordenadas 13°48'40.32"N, 89°30'18.45"O; y la tercera a 618 msnm, coordenadas  13°48'38.35"N,  89°30'19.08"O. Cada muestra se compuso de tres submuestras.</p>
+</span>
+  
+     
+      
+      <span class='site-description SLV-la-presa'><p>Sitio de estudio,cooperativa en el Cantón La Presa, Municipio de el Congo, Departamento de Santa Ana, El Salvador. Las coordenadas son 13°48'39.57"N y 89°30'18.70"O, la elevación media 610 msnm, pendiente de 20% al 30% ,  se cultiva granos básicos (maíz, arroz y frijol) desde hace 40 años.</p>
+</span>
+  
+     
+      
+      <span class='site-description REGIONAL'><p>Project&rsquo;s main objective is to enhance capacity for sound assessment of land degradation and to improve national and regional policies for soil conservation and environmental protection in Latin America, Caribbean and Antarctic ecosystems through the measurement of environmental radionuclide inventories.</p>
+</span>
+  
+     
+      
+      <span class='site-description PER'><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</span>
+  
+     
+      
+      <span class='site-description NIC-el-cristal-ref'><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</span>
+  
+     
+      
+      <span class='site-description NIC-el-cristal-estu'><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</span>
+  
+     
+      
+      <span class='site-description NIC-el-cristal'><p> ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</span>
+  
+     
+      
+      <span class='site-description NIC'><p>ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</span>
+  
+     
+      
+      <span class='site-description MEX-tequila-sedi'><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</span>
+  
+     
+      
+      <span class='site-description MEX-tequila-ref'><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</span>
+  
+     
+      
+      <span class='site-description MEX-tequila-eros'><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</span>
+  
+     
+      
+      <span class='site-description MEX-tequila'><p>Tequila es un municipio y un poblado del estado de Jalisco, en México. El nombre de Tequila proviene de la palabra náhuatl Tecuilan o Tequillan,Cristis que quiere decir lugar de tributos. Es un &ldquo;pueblo mágico&rdquo;. Tequila es conocido por darle su nombre al Tequila, al ser uno de los territorios donde éste se produce.</p>
+</span>
+  
+     
+      
+      <span class='site-description MEX'><p>Es el décimo cuarto país más extenso del mundo, con una superficie cercana a los 2 millones de km². Su población ronda los 112 millones de personas en 2010. La mayoría tiene como lengua materna el español, al que el estado reconoce como lengua nacional junto a 67 lenguas indígenas</p>
+</span>
+  
+     
+      
+      <span class='site-description JAM-blue-mountains'><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</span>
+  
+     
+      
+      <span class='site-description JAM'><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</span>
+  
+     
+      
+      <span class='site-description HTI'><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</span>
+  
+     
+      
+      <span class='site-description DOM-cuenca'><p>La cuenca del río Nizao, con 103,602 hectáreas de extensión, es una de las más productivas del país por su sistema de embalses para generación de energía, suministro del 40% del agua potable de Santo Domingo y riego de 14,000 hectáreas en Baní y San Cristobal.</p>
+
+<p>El río Nizao, uno de los más regulados del país, con el 100% de su caudal utilizado para actividades productivas, nace en la Cordillera Central, Loma de Alto Bandera, área protegida de 166 km2 declarada como Reserva Científica; tiene una longitud de 132 km hasta su desembocadura en el mar Caribe. El río está regulado por cuatro embalses: Jigüey (167 Hm3), Aguacate (4.3 Hm3), Valdesia (186 Hm3) y Las Barias (6.1 Hm3), los cuales son utilizados para generación eléctrica (los tres primeros), agua potable (Valdesia) y riego (Las Barías).</p>
+
+<p>Del embalse de Valdesia se derivan 6 m3/s para el acueducto de Santo Domingo, el resto del caudal disponible en este punto, cerca de 14 m3/s, llega al embase de Las Barías de donde es desviado a los distritos de riego Nizao-Valdesia en la margen derecha del río, fuera de la cuenca (zona de Baní) y en la margen izquierda (zona de San Cristóbal) por los canales Marcos Cabral y Nizao Nijayo, respectivamente. Por lo tanto, el caudal medio desde La Barías hasta su desembocadura es mínimo, lo cual ha facilitado la concentración de explotaciones de canteras en esta zona; a pesar del bajo caudal medio, y con la dirección Este-Oeste de las corrientes marinas, los caudales mayores al medio influyen en la zona costera desde Nizao hasta la Bahía de Ocoa. (Ver anexo cartográfico en el informe diagnóstico).</p>
+</span>
+  
+     
+      
+      <span class='site-description DOM'><p>Comparte la Isla Española con Haiti, ocupa 48,194.64 km² en la parte oriental de la isla. El relieve dominicano es el más notable de las Antillas, en su reducida extensión se notan 20 regiones geomorfológicas. Cuenta con &ldquo;tierras y aguas bajo el nivel del mar&rdquo; y &ldquo;alturas mayores de 3,000 msnm&rdquo;</p>
+</span>
+  
+     
+      
+      <span class='site-description CUB-consolation-ref'><p>Este sitio permitió obtener el valor de referencia de la Densidad Superficial de Actividad del 137Cs asociado al “Fallout” del área. El mismo se seleccionó tomando en cuenta como principales criterios los siguientes: proximidad al área de estudio y alturas similares a esta, pendiente cercana a cero, cobertura vegetal constante durante el periodo de relevancia (al menos 50 años).</p>
+</span>
+  
+     
+      
+      <span class='site-description CUB-consolation-estu'><p>Este sitio se divide en 2 parcelas (Norte y Sur) y con área total de 4 ha, donde el principal cultivo es el tabaco. La pendiente es del orden de 4 a 6% y el muestreo de campo se realizó en varias campañas en forma de transectas y redes, con muestras compuestas hasta los 40 cm de profundidad.</p>
+</span>
+  
+     
+      
+      <span class='site-description CUB-consolation'><p>Con el objeto de aplicar las técnicas nucleares (137Cs) para evaluar las tasas de redistribución de suelos se selecciono un sitio dentro de la Cooperativa agrícola &ldquo;Jesús Suárez Soca&rdquo; en la provincia de Pinar del Río.</p>
+</span>
+  
+     
+      
+      <span class='site-description CUB'><p>En el marco de este proyecto participan especialistas del Centro de Protección e Higiene de las Radiaciones (CITMA), el Instituto de Suelos (MINAGRI) y de la Dirección Provincial de Suelos de Pinar del Río (MINAGRI). El objetivo ha sido la puesta a punto y empleo de la técnicas de medición de los niveles de redistribución de suelo mediante radionúclidos ambientales (137 Cs).</p>
+</span>
+  
+     
+      
+      <span class='site-description CHL-los-pinos'><p>Utilizando 7Be para estimar redistribución de suelo asociada a un evento erosivo ( 420 mm, 69 d) que afectó un sitio forestal del centro-sur de Chile en el período subsiguiente a la cosecha a tala rasa, se estimó
+Erosión media: 0.59±0.13 kg m-2 en 65% del área
+Sedimentación media: 0.73±0.23 kg m-2
+Erosión neta: 0.19±0.11 kg m-2</p>
+</span>
+  
+     
+      
+      <span class='site-description CHL'><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</span>
+  
+     
+      
+      <span class='site-description BRA-tiri'><p style="text-align: justify; "><i>Serra da Tiririca State Park</i> is an environmental protection area, located in Niterói, Brazil. It was created in 1991, being declared by UNESCO as a "world biosphere reserve". Besides de Tiririca mountain, its total area includes the Darcy Ribeiro Reserve, Peça mountain, islands of Pai, Mãe, and Menina; encompassing an area of 3568 ha.</p>
+
+</span>
+  
+     
+      
+      <span class='site-description BRA'><p style="text-align: justify; "><i>Brazil</i>, officially the Federative Republic of Brazil, is the largest country in South America and in the Latin America region. It is the world's fifth largest country, both by geographical area and by population with over 200 million people. It is the largest Lusophone country in the world, and the only one in the Americas. </p>
+
+</span>
+  
+     
+      
+      <span class='site-description BOL-inquisivi'><p>El municipio Inquisivi, se encuentra en la provincia Inquisivi, del departamento La Paz, entre las siguientes coordenadas:
+66º43’29.49’’ y 67º17’58. 62’’ de LW
+15º47’34.9’’ y 17º18’20.46’’ de LS
+Tiene una extensión territorial aproximada de 3.268,00 km2, presenta cinco pisos ecológicos; (Cordillera, Puna, Cabecera de Valle, Valle y Subtrópico).
+Forma parte de la gran Meseta Andina, la que es parte de los valles interandinos. El Municipio se encuentra en un rango altitudinal de 2,200 a 4.000 m.s.n.m, presenta un relieve abrupto, con pendientes variables.
+La temperatura media máxima anual en el mes de mayor temperatura puede alcanzar de 26,4 °C, con una mínima media de 9,2 °C; con una temperatura promedio de 16.69 °C. La precipitación anual está entre 1000 – 1200 mm año. Humedad relativa media de 5.8 % en los meses de verano y en invierno descienden a 4.3 %.
+Los suelos se caracterizan por ser muy poco profundos a profundos, en las pendientes.</p>
+</span>
+  
+     
+      
+      <span class='site-description BOL'><p>Bolivia se encuentra en América del Sur, es un país de estado plurinacional. Se divide en 9 departamentos, tiene una superficie de 1.098.581 km²  extendiendose desde los Andes Centrales, pasando por parte del Chaco hasta la Amazonía.
+La ubicación geográfica del país le permite comprender una gran variedad de formas de relieve y climas. Existe una amplia biodiversidad (considerada entre las mayores del mundo), así como distintas ecorregiones y subunidades ecológicas como el Altiplano, la llanura amazónica, los valles secos, los Yungas y las serranías chiquitanas.
+En Bolivia los suelos están afectados en un 45% por procesos de erosión hídrica y 35% de erosión eólica.</p>
+</span>
+  
+     
+      
+      <span class='site-description ARG-eldorado-site1'><p>Lorem ipsum dolor sit amet, consectsdfgsdfgsmklfhm smdflkghmsfdklgs</p>
+</span>
+  
+     
+      
+      <span class='site-description ARG-eldorado'><p>Establecimiento ‘El Dorado’ San Luis, Argentina</p>
+
+<p>El sitio seleccionado está a unos 60 km al sudeste de la ciudad de San Luis (33°31'52"S; 66°6'48"O). Pedológicamente, está incluido en la región de Planicies Medanosas Áridas y Semiáridas del dentro de Argentina, con isohieta de 400 a 500 mm y una altitud de 600 msnm. Los suelos son clasificados como Regosoles Áridos (Entisoles), de textura arenosa, con gran drenaje, rápida permeabilidad y baja capacidad de retención de la humedad, escaso desarrollo genético del perfil y bajo contenido en materia orgánica</p>
+</span>
+  
+     
+      
+      <span class='site-description ARG'><p>The Environmental Study Group (GEA) of the National University of San Luis (UNSL), is currently studying the impact of distinct agricultural practices on state of soil conservation. The measurement of <b>Fallout RadioNuclides</b>, Cesium 137 in particular, allows to determine levels of erosion.</p>
+</span>
+  
+     
+
+    <span class="explain"> Click below to turn on/off, click+drag to rearrange.</span>
+    <div class='datalist'>
+      <div id='onlayers'>
+        <ul id='sortable'>
+        </ul>
+      </div>
+      <div id='offlayers'>
+        <ul id='layerlist'>
+   
+          
+   
+          <li class='SLV-la-presa-mues normal' id='0'>
+            <div class='layer-container'>
+              <a class='layer-link' id='geoportal-arcal.test_salv' href='#'>Recapitulacion curso</a>
+              <a class='layer-arrow' href='#'>details</a>
+            </div>
+            <div class='detail'>
+              <ul>
+                <li class='clearfix'>
+                  <div class='detail-name dl'>Download</div>
+                  <div class='downloads clearfix detail-content'>
+                    
+                    <a href='link to your kml file if any' class='download download-kml clearfix'>
+                    <span class='icon kml'>Kml</span>
+                    <span class='button black'>Kml</span>
+                    </a>
+                    
+
+                  </div>  
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Description</div><div class='detail-content'><p>Recapitulacion curso</p>
+</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Last Updated</div><div class='detail-content'>2012/10/19</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Source</div><div class='detail-bottom'><p><a href="http://centa.gob.sv/">CENTA</a></p>
+</div>
+                  <div class='detail-name'>License</div><div class='detail-bottom'>Public Domain</div>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          
+   
+          <li class='CHL-los-pinos default' id='1'>
+            <div class='layer-container'>
+              <a class='layer-link' id='map-chi-rla5051.lp_soil_redistribution' href='#'>Soil redistribution</a>
+              <a class='layer-arrow' href='#'>details</a>
+            </div>
+            <div class='detail'>
+              <ul>
+                <li class='clearfix'>
+                  <div class='detail-name dl'>Download</div>
+                  <div class='downloads clearfix detail-content'>
+                    
+
+                  </div>  
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Description</div><div class='detail-content'><p>Soil redistribution</p>
+</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Last Updated</div><div class='detail-content'>2012/10/19</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Source</div><div class='detail-bottom'><p>Universidad Austral de Chile, Valdivia</p>
+</div>
+                  <div class='detail-name'>License</div><div class='detail-bottom'>Public Domain</div>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          
+   
+          <li class='BOL-inquisivi normal' id='0'>
+            <div class='layer-container'>
+              <a class='layer-link' id='bumerand.ex_bol' href='#'>la nueva capa</a>
+              <a class='layer-arrow' href='#'>details</a>
+            </div>
+            <div class='detail'>
+              <ul>
+                <li class='clearfix'>
+                  <div class='detail-name dl'>Download</div>
+                  <div class='downloads clearfix detail-content'>
+                    
+                    <a href='link to your kml file if any' class='download download-kml clearfix'>
+                    <span class='icon kml'>Kml</span>
+                    <span class='button black'>Kml</span>
+                    </a>
+                    
+
+                  </div>  
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Description</div><div class='detail-content'><p>Beryllium 7 concentration</p>
+</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Last Updated</div><div class='detail-content'>2012/10/19</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Source</div><div class='detail-bottom'><p><a href="http://www.unsl.edu.ar">GEA-UNSL</a></p>
+</div>
+                  <div class='detail-name'>License</div><div class='detail-bottom'>Public Domain</div>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          
+   
+          <li class='CHL-los-pinos default' id='2'>
+            <div class='layer-container'>
+              <a class='layer-link' id='map-chi-rla5051.lp_elevation' href='#'>Elevation</a>
+              <a class='layer-arrow' href='#'>details</a>
+            </div>
+            <div class='detail'>
+              <ul>
+                <li class='clearfix'>
+                  <div class='detail-name dl'>Download</div>
+                  <div class='downloads clearfix detail-content'>
+                    
+                    <a href='link to your kml file if any' class='download download-kml clearfix'>
+                    <span class='icon kml'>Kml</span>
+                    <span class='button black'>Kml</span>
+                    </a>
+                    
+
+                  </div>  
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Description</div><div class='detail-content'><p>Elevation</p>
+</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Last Updated</div><div class='detail-content'>2012/10/19</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Source</div><div class='detail-bottom'><p>Universidad Austral de Chile, Valdivia</p>
+</div>
+                  <div class='detail-name'>License</div><div class='detail-bottom'>Public Domain</div>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          
+   
+          <li class='ARG-eldorado-site1 normal' id='0'>
+            <div class='layer-container'>
+              <a class='layer-link' id='geoportal-arcal.be_course' href='#'>my new layer title</a>
+              <a class='layer-arrow' href='#'>details</a>
+            </div>
+            <div class='detail'>
+              <ul>
+                <li class='clearfix'>
+                  <div class='detail-name dl'>Download</div>
+                  <div class='downloads clearfix detail-content'>
+                    
+                    <a href='http://dl.dropbox.com/u/108352435/countries/REGIONAL/kml/ARCAL%20RLA%205051.kmz' class='download download-kml clearfix'>
+                    <span class='icon kml'>Kml</span>
+                    <span class='button black'>Kml</span>
+                    </a>
+                    
+
+                  </div>  
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Description</div><div class='detail-content'><p>My new description</p>
+</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Last Updated</div><div class='detail-content'>2012/10/19</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Source</div><div class='detail-bottom'><p><a href="http://www.unsl.edu.ar">GEA-UNSL</a></p>
+</div>
+                  <div class='detail-name'>License</div><div class='detail-bottom'>Public Domain</div>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          
+   
+          <li class='your geo-tag normal' id='0'>
+            <div class='layer-container'>
+              <a class='layer-link' id='Map ID (MapBox layer)' href='#'>your title</a>
+              <a class='layer-arrow' href='#'>details</a>
+            </div>
+            <div class='detail'>
+              <ul>
+                <li class='clearfix'>
+                  <div class='detail-name dl'>Download</div>
+                  <div class='downloads clearfix detail-content'>
+                    
+                    <a href='link to your kml file if any' class='download download-kml clearfix'>
+                    <span class='icon kml'>Kml</span>
+                    <span class='button black'>Kml</span>
+                    </a>
+                    
+
+                  </div>  
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Description</div><div class='detail-content'><p>Beryllium 7 concentration</p>
+</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Last Updated</div><div class='detail-content'>2012/10/19</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Source</div><div class='detail-bottom'><p><a href="http://www.unsl.edu.ar">GEA-UNSL</a></p>
+</div>
+                  <div class='detail-name'>License</div><div class='detail-bottom'>Public Domain</div>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          
+   
+          <li class='your geo-tag normal' id='0'>
+            <div class='layer-container'>
+              <a class='layer-link' id='Map ID (MapBox layer)' href='#'>your title</a>
+              <a class='layer-arrow' href='#'>details</a>
+            </div>
+            <div class='detail'>
+              <ul>
+                <li class='clearfix'>
+                  <div class='detail-name dl'>Download</div>
+                  <div class='downloads clearfix detail-content'>
+                    
+                    <a href='link to your kml file if any' class='download download-kml clearfix'>
+                    <span class='icon kml'>Kml</span>
+                    <span class='button black'>Kml</span>
+                    </a>
+                    
+
+                  </div>  
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Description</div><div class='detail-content'><p>Beryllium 7 concentration</p>
+</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Last Updated</div><div class='detail-content'>2012/10/19</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Source</div><div class='detail-bottom'><p><a href="http://www.unsl.edu.ar">GEA-UNSL</a></p>
+</div>
+                  <div class='detail-name'>License</div><div class='detail-bottom'>Public Domain</div>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          
+   
+          <li class='CUB-consolation-estu normal' id='0'>
+            <div class='layer-container'>
+              <a class='layer-link' id='rla5051cuba.sitiocubacs' href='#'>Grafico No. 1</a>
+              <a class='layer-arrow' href='#'>details</a>
+            </div>
+            <div class='detail'>
+              <ul>
+                <li class='clearfix'>
+                  <div class='detail-name dl'>Download</div>
+                  <div class='downloads clearfix detail-content'>
+                    
+                    <a href='link to your kml file if any' class='download download-kml clearfix'>
+                    <span class='icon kml'>Kml</span>
+                    <span class='button black'>Kml</span>
+                    </a>
+                    
+
+                  </div>  
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Description</div><div class='detail-content'><p>Densidad superficial de actividad (Bq/m2) y Tasas de redistribución (t/ha.a)</p>
+</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Last Updated</div><div class='detail-content'>2012/10/19</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Source</div><div class='detail-bottom'><p><a href="http://www.unsl.edu.ar">GEA-UNSL</a></p>
+</div>
+                  <div class='detail-name'>License</div><div class='detail-bottom'>Public Domain</div>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          
+   
+          <li class='BRA-tiri default' id='1'>
+            <div class='layer-container'>
+              <a class='layer-link' id='geoportal-arcal.brazil2' href='#'>Sites, 2012-11-20</a>
+              <a class='layer-arrow' href='#'>details</a>
+            </div>
+            <div class='detail'>
+              <ul>
+                <li class='clearfix'>
+                  <div class='detail-name dl'>Download</div>
+                  <div class='downloads clearfix detail-content'>
+                    
+
+                  </div>  
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Description</div><div class='detail-content'><p>Beryllium 7 concentration</p>
+</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Last Updated</div><div class='detail-content'>2012/10/19</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Source</div><div class='detail-bottom'><p><a href="http://www.unsl.edu.ar">GEA-UNSL</a></p>
+</div>
+                  <div class='detail-name'>License</div><div class='detail-bottom'>Public Domain</div>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          
+   
+          <li class='MEX-tequila default' id='1'>
+            <div class='layer-container'>
+              <a class='layer-link' id='geoportal-arcal.mexico-sites' href='#'>Sites, 2012-11-20</a>
+              <a class='layer-arrow' href='#'>details</a>
+            </div>
+            <div class='detail'>
+              <ul>
+                <li class='clearfix'>
+                  <div class='detail-name dl'>Download</div>
+                  <div class='downloads clearfix detail-content'>
+                    
+
+                  </div>  
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Description</div><div class='detail-content'><p>Beryllium 7 concentration</p>
+</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Last Updated</div><div class='detail-content'>2012/10/19</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Source</div><div class='detail-bottom'><p><a href="http://www.unsl.edu.ar">GEA-UNSL</a></p>
+</div>
+                  <div class='detail-name'>License</div><div class='detail-bottom'>Public Domain</div>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          
+   
+          <li class='MEX-tequila-sedi default' id='1'>
+            <div class='layer-container'>
+              <a class='layer-link' id='geoportal-arcal.mexico-sites' href='#'>Sites, 2012-11-20</a>
+              <a class='layer-arrow' href='#'>details</a>
+            </div>
+            <div class='detail'>
+              <ul>
+                <li class='clearfix'>
+                  <div class='detail-name dl'>Download</div>
+                  <div class='downloads clearfix detail-content'>
+                    
+
+                  </div>  
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Description</div><div class='detail-content'><p>Beryllium 7 concentration</p>
+</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Last Updated</div><div class='detail-content'>2012/10/19</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Source</div><div class='detail-bottom'><p><a href="http://www.unsl.edu.ar">GEA-UNSL</a></p>
+</div>
+                  <div class='detail-name'>License</div><div class='detail-bottom'>Public Domain</div>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          
+   
+          <li class='MEX-tequila-ref default' id='1'>
+            <div class='layer-container'>
+              <a class='layer-link' id='geoportal-arcal.mexico-sites' href='#'>Sites, 2012-11-20</a>
+              <a class='layer-arrow' href='#'>details</a>
+            </div>
+            <div class='detail'>
+              <ul>
+                <li class='clearfix'>
+                  <div class='detail-name dl'>Download</div>
+                  <div class='downloads clearfix detail-content'>
+                    
+
+                  </div>  
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Description</div><div class='detail-content'><p>Beryllium 7 concentration</p>
+</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Last Updated</div><div class='detail-content'>2012/10/19</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Source</div><div class='detail-bottom'><p><a href="http://www.unsl.edu.ar">GEA-UNSL</a></p>
+</div>
+                  <div class='detail-name'>License</div><div class='detail-bottom'>Public Domain</div>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          
+   
+          <li class='MEX-tequila-eros default' id='1'>
+            <div class='layer-container'>
+              <a class='layer-link' id='geoportal-arcal.mexico-sites' href='#'>Sites, 2012-11-20</a>
+              <a class='layer-arrow' href='#'>details</a>
+            </div>
+            <div class='detail'>
+              <ul>
+                <li class='clearfix'>
+                  <div class='detail-name dl'>Download</div>
+                  <div class='downloads clearfix detail-content'>
+                    
+
+                  </div>  
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Description</div><div class='detail-content'><p>Beryllium 7 concentration</p>
+</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Last Updated</div><div class='detail-content'>2012/10/19</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Source</div><div class='detail-bottom'><p><a href="http://www.unsl.edu.ar">GEA-UNSL</a></p>
+</div>
+                  <div class='detail-name'>License</div><div class='detail-bottom'>Public Domain</div>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          
+   
+          <li class='CHL-los-pinos default' id='1'>
+            <div class='layer-container'>
+              <a class='layer-link' id='geoportal-arcal.chile' href='#'>Sites, 2012-11-20</a>
+              <a class='layer-arrow' href='#'>details</a>
+            </div>
+            <div class='detail'>
+              <ul>
+                <li class='clearfix'>
+                  <div class='detail-name dl'>Download</div>
+                  <div class='downloads clearfix detail-content'>
+                    
+
+                  </div>  
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Description</div><div class='detail-content'><p>Beryllium 7 concentration</p>
+</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Last Updated</div><div class='detail-content'>2012/10/19</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Source</div><div class='detail-bottom'><p><a href="http://www.unsl.edu.ar">GEA-UNSL</a></p>
+</div>
+                  <div class='detail-name'>License</div><div class='detail-bottom'>Public Domain</div>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          
+   
+          <li class='SLV-la-presa default' id='1'>
+            <div class='layer-container'>
+              <a class='layer-link' id='geoportal-arcal.salvador2' href='#'>Sites, 2012-11-20</a>
+              <a class='layer-arrow' href='#'>details</a>
+            </div>
+            <div class='detail'>
+              <ul>
+                <li class='clearfix'>
+                  <div class='detail-name dl'>Download</div>
+                  <div class='downloads clearfix detail-content'>
+                    
+
+                  </div>  
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Description</div><div class='detail-content'><p>Beryllium 7 concentration</p>
+</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Last Updated</div><div class='detail-content'>2012/10/19</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Source</div><div class='detail-bottom'><p><a href="http://www.unsl.edu.ar">GEA-UNSL</a></p>
+</div>
+                  <div class='detail-name'>License</div><div class='detail-bottom'>Public Domain</div>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          
+   
+          <li class='SLV-la-presa-ref default' id='1'>
+            <div class='layer-container'>
+              <a class='layer-link' id='geoportal-arcal.salvador2' href='#'>Sites, 2012-11-20</a>
+              <a class='layer-arrow' href='#'>details</a>
+            </div>
+            <div class='detail'>
+              <ul>
+                <li class='clearfix'>
+                  <div class='detail-name dl'>Download</div>
+                  <div class='downloads clearfix detail-content'>
+                    
+
+                  </div>  
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Description</div><div class='detail-content'><p>Beryllium 7 concentration</p>
+</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Last Updated</div><div class='detail-content'>2012/10/19</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Source</div><div class='detail-bottom'><p><a href="http://www.unsl.edu.ar">GEA-UNSL</a></p>
+</div>
+                  <div class='detail-name'>License</div><div class='detail-bottom'>Public Domain</div>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          
+   
+          <li class='SLV-la-presa-mues default' id='1'>
+            <div class='layer-container'>
+              <a class='layer-link' id='geoportal-arcal.salvador2' href='#'>Sites, 2012-11-20</a>
+              <a class='layer-arrow' href='#'>details</a>
+            </div>
+            <div class='detail'>
+              <ul>
+                <li class='clearfix'>
+                  <div class='detail-name dl'>Download</div>
+                  <div class='downloads clearfix detail-content'>
+                    
+
+                  </div>  
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Description</div><div class='detail-content'><p>Beryllium 7 concentration</p>
+</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Last Updated</div><div class='detail-content'>2012/10/19</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Source</div><div class='detail-bottom'><p><a href="http://www.unsl.edu.ar">GEA-UNSL</a></p>
+</div>
+                  <div class='detail-name'>License</div><div class='detail-bottom'>Public Domain</div>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          
+   
+          <li class='BOL-inquisivi default' id='1'>
+            <div class='layer-container'>
+              <a class='layer-link' id='geoportal-arcal.bolivia' href='#'>Sites, 2012-11-20</a>
+              <a class='layer-arrow' href='#'>details</a>
+            </div>
+            <div class='detail'>
+              <ul>
+                <li class='clearfix'>
+                  <div class='detail-name dl'>Download</div>
+                  <div class='downloads clearfix detail-content'>
+                    
+
+                  </div>  
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Description</div><div class='detail-content'><p>Beryllium 7 concentration</p>
+</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Last Updated</div><div class='detail-content'>2012/10/19</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Source</div><div class='detail-bottom'><p><a href="http://www.unsl.edu.ar">GEA-UNSL</a></p>
+</div>
+                  <div class='detail-name'>License</div><div class='detail-bottom'>Public Domain</div>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          
+   
+          <li class='NIC-el-cristal default' id='1'>
+            <div class='layer-container'>
+              <a class='layer-link' id='geoportal-arcal.nicaragua' href='#'>Sites, 2012-11-20</a>
+              <a class='layer-arrow' href='#'>details</a>
+            </div>
+            <div class='detail'>
+              <ul>
+                <li class='clearfix'>
+                  <div class='detail-name dl'>Download</div>
+                  <div class='downloads clearfix detail-content'>
+                    
+
+                  </div>  
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Description</div><div class='detail-content'><p>Beryllium 7 concentration</p>
+</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Last Updated</div><div class='detail-content'>2012/10/19</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Source</div><div class='detail-bottom'><p><a href="http://www.unsl.edu.ar">GEA-UNSL</a></p>
+</div>
+                  <div class='detail-name'>License</div><div class='detail-bottom'>Public Domain</div>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          
+   
+          <li class='NIC-el-cristal-ref default' id='1'>
+            <div class='layer-container'>
+              <a class='layer-link' id='geoportal-arcal.nicaragua' href='#'>Sites, 2012-11-20</a>
+              <a class='layer-arrow' href='#'>details</a>
+            </div>
+            <div class='detail'>
+              <ul>
+                <li class='clearfix'>
+                  <div class='detail-name dl'>Download</div>
+                  <div class='downloads clearfix detail-content'>
+                    
+
+                  </div>  
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Description</div><div class='detail-content'><p>Beryllium 7 concentration</p>
+</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Last Updated</div><div class='detail-content'>2012/10/19</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Source</div><div class='detail-bottom'><p><a href="http://www.unsl.edu.ar">GEA-UNSL</a></p>
+</div>
+                  <div class='detail-name'>License</div><div class='detail-bottom'>Public Domain</div>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          
+   
+          <li class='NIC-el-cristal-estu default' id='1'>
+            <div class='layer-container'>
+              <a class='layer-link' id='geoportal-arcal.nicaragua' href='#'>Sites, 2012-11-20</a>
+              <a class='layer-arrow' href='#'>details</a>
+            </div>
+            <div class='detail'>
+              <ul>
+                <li class='clearfix'>
+                  <div class='detail-name dl'>Download</div>
+                  <div class='downloads clearfix detail-content'>
+                    
+
+                  </div>  
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Description</div><div class='detail-content'><p>Beryllium 7 concentration</p>
+</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Last Updated</div><div class='detail-content'>2012/10/19</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Source</div><div class='detail-bottom'><p><a href="http://www.unsl.edu.ar">GEA-UNSL</a></p>
+</div>
+                  <div class='detail-name'>License</div><div class='detail-bottom'>Public Domain</div>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          
+   
+          <li class='DOM-cuenca default' id='1'>
+            <div class='layer-container'>
+              <a class='layer-link' id='geoportal-arcal.dom' href='#'>Sites, 2012-11-20</a>
+              <a class='layer-arrow' href='#'>details</a>
+            </div>
+            <div class='detail'>
+              <ul>
+                <li class='clearfix'>
+                  <div class='detail-name dl'>Download</div>
+                  <div class='downloads clearfix detail-content'>
+                    
+                    <a href='' class='download download- clearfix'>
+                    <span class='icon '></span>
+                    <span class='button black'></span>
+                    </a>
+                    
+
+                  </div>  
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Description</div><div class='detail-content'><p>Beryllium 7 concentration</p>
+</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Last Updated</div><div class='detail-content'>2012/10/19</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Source</div><div class='detail-bottom'><p><a href="http://www.unsl.edu.ar">GEA-UNSL</a></p>
+</div>
+                  <div class='detail-name'>License</div><div class='detail-bottom'>Public Domain</div>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          
+   
+          <li class='CUB-consolation-ref default' id='1'>
+            <div class='layer-container'>
+              <a class='layer-link' id='geoportal-arcal.cuba' href='#'>Sites, 2012-11-20</a>
+              <a class='layer-arrow' href='#'>details</a>
+            </div>
+            <div class='detail'>
+              <ul>
+                <li class='clearfix'>
+                  <div class='detail-name dl'>Download</div>
+                  <div class='downloads clearfix detail-content'>
+                    
+
+                  </div>  
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Description</div><div class='detail-content'><p>Beryllium 7 concentration</p>
+</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Last Updated</div><div class='detail-content'>2012/10/19</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Source</div><div class='detail-bottom'><p><a href="http://www.unsl.edu.ar">GEA-UNSL</a></p>
+</div>
+                  <div class='detail-name'>License</div><div class='detail-bottom'>Public Domain</div>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          
+   
+          <li class='CUB-consolation-estu default' id='1'>
+            <div class='layer-container'>
+              <a class='layer-link' id='geoportal-arcal.cuba' href='#'>Sites, 2012-11-20</a>
+              <a class='layer-arrow' href='#'>details</a>
+            </div>
+            <div class='detail'>
+              <ul>
+                <li class='clearfix'>
+                  <div class='detail-name dl'>Download</div>
+                  <div class='downloads clearfix detail-content'>
+                    
+                    <a href='http://dl.dropbox.com/s/k8qn5bx5df67p19/Sitio_Estudio_Cub.kml' class='download download-kml clearfix'>
+                    <span class='icon kml'>Kml</span>
+                    <span class='button black'>Kml</span>
+                    </a>
+                    
+
+                  </div>  
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Description</div><div class='detail-content'><p>Sitio de estudio en Cuba</p>
+</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Last Updated</div><div class='detail-content'>2012/10/19</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Source</div><div class='detail-bottom'><p><a href="http://www.unsl.edu.ar">GEA-UNSL</a></p>
+</div>
+                  <div class='detail-name'>License</div><div class='detail-bottom'>Public Domain</div>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          
+   
+          <li class='CUB-consolation default' id='1'>
+            <div class='layer-container'>
+              <a class='layer-link' id='geoportal-arcal.cuba' href='#'>Sites, 2012-11-20</a>
+              <a class='layer-arrow' href='#'>details</a>
+            </div>
+            <div class='detail'>
+              <ul>
+                <li class='clearfix'>
+                  <div class='detail-name dl'>Download</div>
+                  <div class='downloads clearfix detail-content'>
+                    
+                    <a href='http://dl.dropbox.com/s/g2j0uqjppuugthc/Sitio%20Cuba%20RLA5051%20rev.kmz' class='download download-kml clearfix'>
+                    <span class='icon kml'>Kml</span>
+                    <span class='button black'>Kml</span>
+                    </a>
+                    
+
+                  </div>  
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Description</div><div class='detail-content'><p>Beryllium 7 concentration</p>
+</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Last Updated</div><div class='detail-content'>2012/10/19</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Source</div><div class='detail-bottom'><p><a href="http://www.unsl.edu.ar">GEA-UNSL</a></p>
+</div>
+                  <div class='detail-name'>License</div><div class='detail-bottom'>Public Domain</div>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          
+   
+          <li class='VEN-caracas default' id='1'>
+            <div class='layer-container'>
+              <a class='layer-link' id='geoportal-arcal.venezuela' href='#'>Sites, 2012-11-20</a>
+              <a class='layer-arrow' href='#'>details</a>
+            </div>
+            <div class='detail'>
+              <ul>
+                <li class='clearfix'>
+                  <div class='detail-name dl'>Download</div>
+                  <div class='downloads clearfix detail-content'>
+                    
+
+                  </div>  
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Description</div><div class='detail-content'><p>Beryllium 7 concentration</p>
+</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Last Updated</div><div class='detail-content'>2012/10/19</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Source</div><div class='detail-bottom'><p><a href="http://www.unsl.edu.ar">GEA-UNSL</a></p>
+</div>
+                  <div class='detail-name'>License</div><div class='detail-bottom'>Public Domain</div>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          
+   
+          <li class='VEN-caracas-ref default' id='1'>
+            <div class='layer-container'>
+              <a class='layer-link' id='geoportal-arcal.venezuela' href='#'>Sites, 2012-11-20</a>
+              <a class='layer-arrow' href='#'>details</a>
+            </div>
+            <div class='detail'>
+              <ul>
+                <li class='clearfix'>
+                  <div class='detail-name dl'>Download</div>
+                  <div class='downloads clearfix detail-content'>
+                    
+
+                  </div>  
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Description</div><div class='detail-content'><p>Beryllium 7 concentration</p>
+</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Last Updated</div><div class='detail-content'>2012/10/19</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Source</div><div class='detail-bottom'><p><a href="http://www.unsl.edu.ar">GEA-UNSL</a></p>
+</div>
+                  <div class='detail-name'>License</div><div class='detail-bottom'>Public Domain</div>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          
+   
+          <li class='VEN-caracas-eros default' id='1'>
+            <div class='layer-container'>
+              <a class='layer-link' id='geoportal-arcal.venezuela' href='#'>Sites, 2012-11-20</a>
+              <a class='layer-arrow' href='#'>details</a>
+            </div>
+            <div class='detail'>
+              <ul>
+                <li class='clearfix'>
+                  <div class='detail-name dl'>Download</div>
+                  <div class='downloads clearfix detail-content'>
+                    
+
+                  </div>  
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Description</div><div class='detail-content'><p>Beryllium 7 concentration</p>
+</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Last Updated</div><div class='detail-content'>2012/10/19</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Source</div><div class='detail-bottom'><p><a href="http://www.unsl.edu.ar">GEA-UNSL</a></p>
+</div>
+                  <div class='detail-name'>License</div><div class='detail-bottom'>Public Domain</div>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          
+   
+          <li class='VEN-caracas-depo default' id='1'>
+            <div class='layer-container'>
+              <a class='layer-link' id='geoportal-arcal.venezuela' href='#'>Sites, 2012-11-20</a>
+              <a class='layer-arrow' href='#'>details</a>
+            </div>
+            <div class='detail'>
+              <ul>
+                <li class='clearfix'>
+                  <div class='detail-name dl'>Download</div>
+                  <div class='downloads clearfix detail-content'>
+                    
+
+                  </div>  
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Description</div><div class='detail-content'><p>Beryllium 7 concentration</p>
+</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Last Updated</div><div class='detail-content'>2012/10/19</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Source</div><div class='detail-bottom'><p><a href="http://www.unsl.edu.ar">GEA-UNSL</a></p>
+</div>
+                  <div class='detail-name'>License</div><div class='detail-bottom'>Public Domain</div>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          
+   
+          <li class='JAM-blue-mountains default' id='1'>
+            <div class='layer-container'>
+              <a class='layer-link' id='geoportal-arcal.jamaica' href='#'>Sites, 2012-11-20</a>
+              <a class='layer-arrow' href='#'>details</a>
+            </div>
+            <div class='detail'>
+              <ul>
+                <li class='clearfix'>
+                  <div class='detail-name dl'>Download</div>
+                  <div class='downloads clearfix detail-content'>
+                    
+
+                  </div>  
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Description</div><div class='detail-content'><p>Beryllium 7 concentration</p>
+</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Last Updated</div><div class='detail-content'>2012/10/19</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Source</div><div class='detail-bottom'><p><a href="http://www.unsl.edu.ar">GEA-UNSL</a></p>
+</div>
+                  <div class='detail-name'>License</div><div class='detail-bottom'>Public Domain</div>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          
+   
+          <li class='URY-atlantida default' id='1'>
+            <div class='layer-container'>
+              <a class='layer-link' id='geoportal-arcal.uruguay' href='#'>Sites, 2012-11-20</a>
+              <a class='layer-arrow' href='#'>details</a>
+            </div>
+            <div class='detail'>
+              <ul>
+                <li class='clearfix'>
+                  <div class='detail-name dl'>Download</div>
+                  <div class='downloads clearfix detail-content'>
+                    
+
+                  </div>  
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Description</div><div class='detail-content'><p>Beryllium 7 concentration</p>
+</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Last Updated</div><div class='detail-content'>2012/10/19</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Source</div><div class='detail-bottom'><p><a href="http://www.unsl.edu.ar">GEA-UNSL</a></p>
+</div>
+                  <div class='detail-name'>License</div><div class='detail-bottom'>Public Domain</div>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          
+   
+          <li class='URY-atlantida-ref default' id='1'>
+            <div class='layer-container'>
+              <a class='layer-link' id='geoportal-arcal.uruguay' href='#'>Sites, 2012-11-20</a>
+              <a class='layer-arrow' href='#'>details</a>
+            </div>
+            <div class='detail'>
+              <ul>
+                <li class='clearfix'>
+                  <div class='detail-name dl'>Download</div>
+                  <div class='downloads clearfix detail-content'>
+                    
+
+                  </div>  
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Description</div><div class='detail-content'><p>Beryllium 7 concentration</p>
+</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Last Updated</div><div class='detail-content'>2012/10/19</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Source</div><div class='detail-bottom'><p><a href="http://www.unsl.edu.ar">GEA-UNSL</a></p>
+</div>
+                  <div class='detail-name'>License</div><div class='detail-bottom'>Public Domain</div>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          
+   
+          <li class='URY-atlantida-mt default' id='1'>
+            <div class='layer-container'>
+              <a class='layer-link' id='geoportal-arcal.uruguay' href='#'>Sites, 2012-11-20</a>
+              <a class='layer-arrow' href='#'>details</a>
+            </div>
+            <div class='detail'>
+              <ul>
+                <li class='clearfix'>
+                  <div class='detail-name dl'>Download</div>
+                  <div class='downloads clearfix detail-content'>
+                    
+
+                  </div>  
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Description</div><div class='detail-content'><p>Beryllium 7 concentration</p>
+</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Last Updated</div><div class='detail-content'>2012/10/19</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Source</div><div class='detail-bottom'><p><a href="http://www.unsl.edu.ar">GEA-UNSL</a></p>
+</div>
+                  <div class='detail-name'>License</div><div class='detail-bottom'>Public Domain</div>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          
+   
+          <li class='URY-atlantida-agr default' id='1'>
+            <div class='layer-container'>
+              <a class='layer-link' id='geoportal-arcal.uruguay' href='#'>Sites, 2012-11-20</a>
+              <a class='layer-arrow' href='#'>details</a>
+            </div>
+            <div class='detail'>
+              <ul>
+                <li class='clearfix'>
+                  <div class='detail-name dl'>Download</div>
+                  <div class='downloads clearfix detail-content'>
+                    
+
+                  </div>  
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Description</div><div class='detail-content'><p>Beryllium 7 concentration</p>
+</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Last Updated</div><div class='detail-content'>2012/10/19</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Source</div><div class='detail-bottom'><p><a href="http://www.unsl.edu.ar">GEA-UNSL</a></p>
+</div>
+                  <div class='detail-name'>License</div><div class='detail-bottom'>Public Domain</div>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          
+   
+          <li class='ARG-eldorado default' id='1'>
+            <div class='layer-container'>
+              <a class='layer-link' id='geoportal-arcal.ARG-eldorado-sites-20121106' href='#'>Study sites, 2012-11-06</a>
+              <a class='layer-arrow' href='#'>details</a>
+            </div>
+            <div class='detail'>
+              <ul>
+                <li class='clearfix'>
+                  <div class='detail-name dl'>Download</div>
+                  <div class='downloads clearfix detail-content'>
+                    
+
+                  </div>  
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Description</div><div class='detail-content'><p>El Dorado Study Sites</p>
+</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Last Updated</div><div class='detail-content'>2012/10/19</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Source</div><div class='detail-bottom'><p><a href="http://www.unsl.edu.ar">GEA-UNSL</a></p>
+</div>
+                  <div class='detail-name'>License</div><div class='detail-bottom'>Public Domain</div>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          
+   
+          <li class='ARG-eldorado-site1 normal' id='0'>
+            <div class='layer-container'>
+              <a class='layer-link' id='geoportal-arcal.ARG-eldorado-site1-cesium-2012-11-06' href='#'>Cesium 137 measurements, 2012-11-06</a>
+              <a class='layer-arrow' href='#'>details</a>
+            </div>
+            <div class='detail'>
+              <ul>
+                <li class='clearfix'>
+                  <div class='detail-name dl'>Download</div>
+                  <div class='downloads clearfix detail-content'>
+                    
+
+                  </div>  
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Description</div><div class='detail-content'><p>Cesium 137 concentration</p>
+</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Last Updated</div><div class='detail-content'>2012/10/19</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Source</div><div class='detail-bottom'><p><a href="http://www.unsl.edu.ar">GEA-UNSL</a></p>
+</div>
+                  <div class='detail-name'>License</div><div class='detail-bottom'>Public Domain</div>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          
+   
+          <li class='ARG-eldorado normal' id='0'>
+            <div class='layer-container'>
+              <a class='layer-link' id='geoportal-arcal.ARG-eldorado-landuse-20121106' href='#'>Land use, 2012-11-06</a>
+              <a class='layer-arrow' href='#'>details</a>
+            </div>
+            <div class='detail'>
+              <ul>
+                <li class='clearfix'>
+                  <div class='detail-name dl'>Download</div>
+                  <div class='downloads clearfix detail-content'>
+                    
+
+                  </div>  
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Description</div><div class='detail-content'><p>El Dorado Land Use</p>
+</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Last Updated</div><div class='detail-content'>2012/10/19</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Source</div><div class='detail-bottom'><p><a href="http://www.unsl.edu.ar">GEA-UNSL</a></p>
+</div>
+                  <div class='detail-name'>License</div><div class='detail-bottom'>Public Domain</div>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          
+   
+          <li class='ARG-eldorado default' id='2'>
+            <div class='layer-container'>
+              <a class='layer-link' id='geoportal-arcal.ARG-eldorado-VHR-image-20121106' href='#'>VHR satellite image, 2012-11-06</a>
+              <a class='layer-arrow' href='#'>details</a>
+            </div>
+            <div class='detail'>
+              <ul>
+                <li class='clearfix'>
+                  <div class='detail-name dl'>Download</div>
+                  <div class='downloads clearfix detail-content'>
+                    
+
+                  </div>  
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Description</div><div class='detail-content'><p>GoogleEarth screenshot (for educational purpose only)</p>
+</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Last Updated</div><div class='detail-content'>2012/10/19</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Source</div><div class='detail-bottom'><p><a href="http://www.unsl.edu.ar">GEA-UNSL</a></p>
+</div>
+                  <div class='detail-name'>License</div><div class='detail-bottom'>Public Domain</div>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          
+   
+          <li class='ARG-eldorado normal' id='0'>
+            <div class='layer-container'>
+              <a class='layer-link' id='geoportal-arcal.ARG-eldorado-500m-road-buff-20121106' href='#'>500m distance buffers from roads, 2012-11-06</a>
+              <a class='layer-arrow' href='#'>details</a>
+            </div>
+            <div class='detail'>
+              <ul>
+                <li class='clearfix'>
+                  <div class='detail-name dl'>Download</div>
+                  <div class='downloads clearfix detail-content'>
+                    
+
+                  </div>  
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Description</div><div class='detail-content'><p>500m distance buffers from roads</p>
+</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Last Updated</div><div class='detail-content'>2012/10/19</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Source</div><div class='detail-bottom'><p><a href="http://www.unsl.edu.ar">GEA-UNSL</a></p>
+</div>
+                  <div class='detail-name'>License</div><div class='detail-bottom'>Public Domain</div>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          
+   
+          <li class='REGIONAL default' id='1'>
+            <div class='layer-container'>
+              <a class='layer-link' id='geoportal-arcal.REGIONAL-sites-2011-11-07' href='#'>Regional ARCAL RLA 5/051 study sites</a>
+              <a class='layer-arrow' href='#'>details</a>
+            </div>
+            <div class='detail'>
+              <ul>
+                <li class='clearfix'>
+                  <div class='detail-name dl'>Download</div>
+                  <div class='downloads clearfix detail-content'>
+                    
+
+                  </div>  
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Description</div><div class='detail-content'><p>Location and characteristics of sites</p>
+</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Last Updated</div><div class='detail-content'>3/28/12</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Source</div><div class='detail-bottom'><p><a href="http://www.unsl.edu.ar">UNSL</a></p>
+</div>
+                  <div class='detail-name'>License</div><div class='detail-bottom'>Public Domain</div>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          
+   
+          <li class='ARG-eldorado-site1 normal' id=''>
+            <div class='layer-container'>
+              <a class='layer-link' id='geoportal-arcal.ARG-eldorado-site1-soil-loss-20121106' href='#'>Soil loss (RST interpolation), 2012-11-06</a>
+              <a class='layer-arrow' href='#'>details</a>
+            </div>
+            <div class='detail'>
+              <ul>
+                <li class='clearfix'>
+                  <div class='detail-name dl'>Download</div>
+                  <div class='downloads clearfix detail-content'>
+                    
+
+                  </div>  
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Description</div><div class='detail-content'><p>Soil loss</p>
+</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Last Updated</div><div class='detail-content'>2012/10/24</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Source</div><div class='detail-bottom'><p><a href="http://www.unsl.edu.ar">GEA-UNSL</a></p>
+</div>
+                  <div class='detail-name'>License</div><div class='detail-bottom'>Public Domain</div>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          
+   
+          <li class='ARG-eldorado-site1 normal' id='0'>
+            <div class='layer-container'>
+              <a class='layer-link' id='geoportal-arcal.ARG-eldorado-site1-slope-20121106' href='#'>Slope</a>
+              <a class='layer-arrow' href='#'>details</a>
+            </div>
+            <div class='detail'>
+              <ul>
+                <li class='clearfix'>
+                  <div class='detail-name dl'>Download</div>
+                  <div class='downloads clearfix detail-content'>
+                    
+
+                  </div>  
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Description</div><div class='detail-content'><p>Slope calculated from DEM</p>
+</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Last Updated</div><div class='detail-content'>2012/10/24</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Source</div><div class='detail-bottom'><p><a href="http://www.unsl.edu.ar">GEA-UNSL</a></p>
+</div>
+                  <div class='detail-name'>License</div><div class='detail-bottom'>Public Domain</div>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          
+   
+          <li class='ARG-eldorado-site1 default' id='2'>
+            <div class='layer-container'>
+              <a class='layer-link' id='geoportal-arcal.ARG-eldorado-site1-dem-20121106' href='#'>Digital Elevation Model</a>
+              <a class='layer-arrow' href='#'>details</a>
+            </div>
+            <div class='detail'>
+              <ul>
+                <li class='clearfix'>
+                  <div class='detail-name dl'>Download</div>
+                  <div class='downloads clearfix detail-content'>
+                    
+
+                  </div>  
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Description</div><div class='detail-content'><p>DEM</p>
+</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Last Updated</div><div class='detail-content'>2012/10/24</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Source</div><div class='detail-bottom'><p><a href="http://www.unsl.edu.ar">GEA-UNSL</a></p>
+</div>
+                  <div class='detail-name'>License</div><div class='detail-bottom'>Public Domain</div>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          
+   
+          <li class='ARG-eldorado-site1 default' id='1'>
+            <div class='layer-container'>
+              <a class='layer-link' id='geoportal-arcal.ARG-eldorado-site1-beryllium-20121106' href='#'>Beryllium 7 measurements, 2012-10-19</a>
+              <a class='layer-arrow' href='#'>details</a>
+            </div>
+            <div class='detail'>
+              <ul>
+                <li class='clearfix'>
+                  <div class='detail-name dl'>Download</div>
+                  <div class='downloads clearfix detail-content'>
+                    
+
+                  </div>  
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Description</div><div class='detail-content'><p>Beryllium 7 concentration</p>
+</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Last Updated</div><div class='detail-content'>2012/10/19</div>
+                </li>
+                <li class='clearfix'>
+                  <div class='detail-name'>Source</div><div class='detail-bottom'><p><a href="http://www.unsl.edu.ar">GEA-UNSL</a></p>
+</div>
+                  <div class='detail-name'>License</div><div class='detail-bottom'>Public Domain</div>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          
+
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class='about-modal' style='display:none;'>
+    <div class='about-content'>
+      <h3>About the Site</h3>
+      <p>ARCAL RLA 5/051 regional technical cooperation project brings together researchers from Latin America and Caribbean in the field of land degradation assessment through the measurement of environmental radionuclide inventories.</p>
+      <p>In that context, a system offering project’s participants the opportunity to disseminate their work and datasets, to compile relevant external datasets and to clearly visualize them, plays a critical role in improving decision making as regards national and regional policies for soil conservation and environmental protection in the region. Furthermore, the geographical dimension and cross-cutting nature of issues involved in ecosystem management requires deploying a system focused on strong geospatial visualization capabilities. This site is such a platform whose main objective is to serve as Geographic Decision Support System in the field of soil erosion monitoring and conservation.   
+      </p>
+      <p class='about-video'><!--<iframe src="http://player.vimeo.com/video/40612546" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>--></p>
+      <a href='#' class='icon about-close'>Close</a>
+    </div>
+  </div>
+
+  <div class='ourdata-modal' style='display:none;'>
+    <div class='ourdata-content'>
+      <h3>Our Data</h3>
+      <p>Describe RFN measurement process, purpose and objectives ...</p>
+      <p>All maps are powered by <a href="http://www.mapbox.com">MapBox Hosting</a>. This site is built using a <a href="https://github.com/geoportal-arcal/DSS">public Github repository</a>.</p>
+      <a href='#' class='icon ourdata-close'>Close</a>
+    </div>
+  </div>
+
+  
+</body>
+</html>

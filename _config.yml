@@ -1,0 +1,226 @@
+auto: true
+server: true
+exclude:
+  - README.md
+  - sample-post
+markdown: rdiscount
+rdiscount:
+  extensions: [smart]
+permalink: pretty
+prose:
+  rooturl: "_posts"
+  metadata:
+    "_posts/narratives": |
+      categories:
+          - narrative
+      geography: your geo-tag
+
+
+    "_posts/data/ARG": |
+      title: your title
+      categories: 
+          - data
+      geography: your geo-tag
+      status: normal
+      default-position: 0
+      layer: Map ID (MapBox layer)
+      source: <a href="http://www.unsl.edu.ar">GEA-UNSL</a>
+      license: Public Domain
+      updated: 2012/10/19
+      description: Beryllium 7 concentration 
+      downloads:
+          - type: kml
+            link: link to your kml file if any
+
+    "_posts/data/BOL": |
+      title: your title
+      categories: 
+          - data
+      geography: your geo-tag
+      status: normal
+      default-position: 0
+      layer: Map ID (MapBox layer)
+      source: <a href="http://www.unsl.edu.ar">GEA-UNSL</a>
+      license: Public Domain
+      updated: 2012/10/19
+      description: Beryllium 7 concentration 
+      downloads:
+          - type: kml
+            link: link to your kml file if any
+
+    "_posts/data/BRA": |
+      title: your title
+      categories: 
+          - data
+      geography: your geo-tag
+      status: normal
+      default-position: 0
+      layer: Map ID (MapBox layer)
+      source: <a href="http://www.unsl.edu.ar">GEA-UNSL</a>
+      license: Public Domain
+      updated: 2012/10/19
+      description: Beryllium 7 concentration 
+      downloads:
+          - type: kml
+            link: link to your kml file if any
+
+    "_posts/data/CHL": |
+      title: your title
+      categories: 
+          - data
+      geography: your geo-tag
+      status: normal
+      default-position: 0
+      layer: Map ID (MapBox layer)
+      source: <a href="http://www.unsl.edu.ar">GEA-UNSL</a>
+      license: Public Domain
+      updated: 2012/10/19
+      description: Beryllium 7 concentration 
+      downloads:
+          - type: kml
+            link: link to your kml file if any
+
+    "_posts/data/CUB": |
+      title: your title
+      categories: 
+          - data
+      geography: your geo-tag
+      status: normal
+      default-position: 0
+      layer: Map ID (MapBox layer)
+      source: <a href="http://www.unsl.edu.ar">GEA-UNSL</a>
+      license: Public Domain
+      updated: 2012/10/19
+      description: Beryllium 7 concentration 
+      downloads:
+          - type: kml
+            link: link to your kml file if any
+
+    "_posts/data/DOM": |
+      title: your title
+      categories: 
+          - data
+      geography: your geo-tag
+      status: normal
+      default-position: 0
+      layer: Map ID (MapBox layer)
+      source: <a href="http://www.unsl.edu.ar">GEA-UNSL</a>
+      license: Public Domain
+      updated: 2012/10/19
+      description: Beryllium 7 concentration 
+      downloads:
+          - type: kml
+            link: link to your kml file if any
+
+    "_posts/data/JAM": |
+      title: your title
+      categories: 
+          - data
+      geography: your geo-tag
+      status: normal
+      default-position: 0
+      layer: Map ID (MapBox layer)
+      source: <a href="http://www.unsl.edu.ar">GEA-UNSL</a>
+      license: Public Domain
+      updated: 2012/10/19
+      description: Beryllium 7 concentration 
+      downloads:
+          - type: kml
+            link: link to your kml file if any
+
+    "_posts/data/MEX": |
+      title: your title
+      categories: 
+          - data
+      geography: your geo-tag
+      status: normal
+      default-position: 0
+      layer: Map ID (MapBox layer)
+      source: <a href="http://www.unsl.edu.ar">GEA-UNSL</a>
+      license: Public Domain
+      updated: 2012/10/19
+      description: Beryllium 7 concentration 
+      downloads:
+          - type: kml
+            link: link to your kml file if any
+
+    "_posts/data/NIC": |
+      title: your title
+      categories: 
+          - data
+      geography: your geo-tag
+      status: normal
+      default-position: 0
+      layer: Map ID (MapBox layer)
+      source: <a href="http://www.unsl.edu.ar">GEA-UNSL</a>
+      license: Public Domain
+      updated: 2012/10/19
+      description: Beryllium 7 concentration 
+      downloads:
+          - type: kml
+            link: link to your kml file if any
+
+    "_posts/data/REGIONAL": |
+      title: your title
+      categories: 
+          - data
+      geography: your geo-tag
+      status: normal
+      default-position: 0
+      layer: Map ID (MapBox layer)
+      source: <a href="http://www.unsl.edu.ar">GEA-UNSL</a>
+      license: Public Domain
+      updated: 2012/10/19
+      description: Beryllium 7 concentration 
+      downloads:
+          - type: kml
+            link: link to your kml file if any
+
+    "_posts/data/SLV": |
+      title: your title
+      categories: 
+          - data
+      geography: your geo-tag
+      status: normal
+      default-position: 0
+      layer: Map ID (MapBox layer)
+      source: <a href="http://www.unsl.edu.ar">GEA-UNSL</a>
+      license: Public Domain
+      updated: 2012/10/19
+      description: Beryllium 7 concentration 
+      downloads:
+          - type: kml
+            link: link to your kml file if any
+
+    "_posts/data/URY": |
+      title: your title
+      categories: 
+          - data
+      geography: your geo-tag
+      status: normal
+      default-position: 0
+      layer: Map ID (MapBox layer)
+      source: <a href="http://www.unsl.edu.ar">GEA-UNSL</a>
+      license: Public Domain
+      updated: 2012/10/19
+      description: Beryllium 7 concentration 
+      downloads:
+          - type: kml
+            link: link to your kml file if any
+
+    "_posts/data/VEN": |
+      title: your title
+      categories: 
+          - data
+      geography: your geo-tag
+      status: normal
+      default-position: 0
+      layer: Map ID (MapBox layer)
+      source: <a href="http://www.unsl.edu.ar">GEA-UNSL</a>
+      license: Public Domain
+      updated: 2012/10/19
+      description: Beryllium 7 concentration 
+      downloads:
+          - type: kml
+            link: link to your kml file if any
+

@@ -1,0 +1,10 @@
+auto: true
+server: true
+exclude:
+  - README.md
+  - sample-post
+markdown: rdiscount
+rdiscount:
+  extensions: [smart]
+permalink: pretty
+baseurl: /sahel-response

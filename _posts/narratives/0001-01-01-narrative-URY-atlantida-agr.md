@@ -1,0 +1,10 @@
+---
+categories: 
+    - narrative
+geography: URY-atlantida-agr
+---
+
+Zona antiguamente ganadera. Desde hace 15 a 10 años se utilizo con agricultura tradicional (arado), desde hace 10 años a la fecha con siembra directa (principalmente cultivos cerealeros, soja, trigo).
+Área total: 2300 metros X 500 metros (115,0 hectáreas)
+Zona de estudio: 350 metros X 250 metros (8,75 hectáreas)
+
