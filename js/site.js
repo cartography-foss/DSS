@@ -36,12 +36,12 @@ $(function() {
     }*/
 
     // Display base layers
-    baseLayers.push('geoportal-arcal.map-98jy9k4j'); 
-    selectDescription('REGIONAL');
+    baseLayers.push('franckalbinet.map-or3tq2cu'); 
+    selectDescription('WORLD');
     $(window).load(function() {
       m = mapbox.map('map');
-      m.centerzoom({ lat: -12, lon: -100 }, 3, true);
-      m.setZoomRange(3,19);
+      m.centerzoom({ lat: 25.8, lon: -80 }, 2, true);
+      m.setZoomRange(1,19);
       m.ui.zoomer.add();
       m.ui.legend.add();
       m.interaction.auto();
@@ -52,8 +52,8 @@ $(function() {
       });*/
       //m.ui.attribution.add()
       //      .content('<a href="http://mapbox.com/about/maps">Terms &amp; Feedback</a>');
-      $('#geo-filter').val('Regional');
-      initLayerSwitcher(['REGIONAL']);
+      $('#geo-filter').val('World');
+      initLayerSwitcher(['WORLD']);
     });
 
     // Update themLayers order
@@ -132,9 +132,9 @@ $(function() {
    }
 
     // Site selection autocomplete
-    // Initialize autocomplete with 'Regional'
+    // Initialize autocomplete with 'World'
 /*    $(document).ready(function() {
-      $('#geo-filter').val('Regional');
+      $('#geo-filter').val('World');
       selectDescription('regional');
       initLayerSwitcher(['regional']);
     })*/
@@ -152,49 +152,12 @@ $(function() {
 
 
     $(function() {
-      var availableTags = ["Regional",
-			"Argentina",
-                        "Bolivia",
-                        "Brazil",
-                        "Chile",
-                        "Cuba",
-                        "Dominican Rep.",
-                        "El Salvador",
-                        "Haiti",
-                        "Jamaica",
-                        "Mexico",
-                        "Nicaragua",
-                        "Peru",
-                        "Uruguay",
-                        "Venezuela",       
-	                "Atlantida, Uruguay",
-	                "Atlantida, Agr., Uruguay",
-	                "Atlantida, Mt., Uruguay",
-	                "Atlantida, Ref., Uruguay",
-	                "Blue montains, Jamaica",
-                        "Caracas, Venezuela",
-	                "Caracas, Depo., Venezuela",
-	                "Caracas, Eros., Venezuela",
-	                "Caracas, Ref., Venezuela",
-	                "Consolation, Cuba",
-	                "Consolation, Ref., Cuba",
-	                "Consolation, Estudio, Cuba",
-	                "Cuenca Nizao, Dominican Rep.",
-	                "El Cristal, Nicaragua",
-	                "El Cristal, Ref., Nicaragua",
-	                "El Cristal, Estudio, Nicaragua",
+      var availableTags = ["World",
+                        "Japan",
+                        "Vienna, Austria",
+                        "Bayonne, France",
 			"El Dorado, Argentina",
 			"El Dorado, Site 1, Argentina",
-	                "Inquisivi, Bolivia",
-                        "La Presa, El Salvador",
-                        "La Presa, Ref., El Salvador",
-                        "La Presa, Mues., El Salvador",
-	                "Los Pinos, Chile",
-	                "Serra Tiririca, Brazil",
-                        "Tequila, Mexico",
-                        "Tequila, Ref., Mexico",
-	                "Tequila, Eros., Mexico",
-	                "Tequila, Sedi., Mexico" 
                        ];
 
       $( "#geo-filter" ).autocomplete({
@@ -203,80 +166,25 @@ $(function() {
         select: function (event, ui) {
           $('a.dropdown').removeClass('active');
 	  switch (ui.item.value) {
-            case 'Regional':
-    	      m.centerzoom({ lat: -12, lon: -100 }, 3, false);
-              selectDescription('REGIONAL');
-              initLayerSwitcher(['REGIONAL']);
+            case 'World':
+    	      m.centerzoom({ lat: 25.8, lon: -90 }, 2, true);
+              selectDescription('WORLD');
+              initLayerSwitcher(['WORLD']);
 	    break;
-            case 'Argentina':
-    	      m.centerzoom({ lat: -33.5635, lon: -66.092 }, 4, false);
-              selectDescription('ARG');
-              initLayerSwitcher(['ARG', 'REGIONAL']);
+            case 'Japan':
+    	      m.centerzoom({ lat: 38.44, lon: 130 }, 5, true);
+              selectDescription('JPN');
+              initLayerSwitcher(['JPN', 'WORLD']);
 	    break;
-            case 'Bolivia':
-    	      m.centerzoom({ lat: -17, lon: -70 }, 6, false);
-              selectDescription('BOL');
-              initLayerSwitcher(['BOL', 'REGIONAL']);
+	    case 'Vienna, Austria':
+    	      m.centerzoom({ lat: 48.14, lon: 16.1 }, 11, true);
+              selectDescription('AUT-vienna');
+              initLayerSwitcher(['AUT-vienna', 'WORLD']);
 	    break;
-            case 'Brazil':
-    	      m.centerzoom({ lat: -11, lon: -80 }, 4, false);
-              selectDescription('BRA');
-              initLayerSwitcher(['BRA', 'REGIONAL']);
-	    break;
-            case 'Chile':
-    	      m.centerzoom({ lat: -37.5, lon: -90 }, 4, false);
-              selectDescription('CHL');
-              initLayerSwitcher(['CHL', 'REGIONAL']);
-	    break;
-            case 'Cuba':
-    	      m.centerzoom({ lat: 22, lon: -83 }, 7, false);
-              selectDescription('CUB');
-              initLayerSwitcher(['CUB', 'REGIONAL']);
-	    break;
-            case 'Dominican Rep.':
-    	      m.centerzoom({ lat: 19, lon: -72 }, 8, false);
-              selectDescription('DOM');
-              initLayerSwitcher(['DOM', 'REGIONAL']);
-   	    break;
-            case 'El Salvador':
-    	      m.centerzoom({ lat: 14, lon: -90 }, 9, false);
-              selectDescription('SLV');
-              initLayerSwitcher(['SLV', 'REGIONAL']);
-	    break;
-            case 'Haiti':
-    	      m.centerzoom({ lat: 19, lon: -74 }, 8, false);
-              selectDescription('HTI');
-              initLayerSwitcher(['HTI', 'REGIONAL']);
-	    break;
-           case 'Jamaica':
-    	      m.centerzoom({ lat: 18, lon: -78 }, 9, false);
-              selectDescription('JAM');
-              initLayerSwitcher(['JAM', 'REGIONAL']);
-	    break;
-            case 'Mexico':
-    	      m.centerzoom({ lat: 22.5, lon: -110 }, 5, false);
-              selectDescription('MEX');
-              initLayerSwitcher(['MEX', 'REGIONAL']);
-	    break;
-            case 'Nicaragua':
-    	      m.centerzoom({ lat: 13, lon: -89 }, 7, false);
-              selectDescription('NIC');
-              initLayerSwitcher(['NIC', 'REGIONAL']);
-	    break;
-            case 'Peru':
-    	      m.centerzoom({ lat: -8, lon: -84 }, 5, false);
-              selectDescription('PER');
-              initLayerSwitcher(['PER', 'REGIONAL']);
-	    break;
-            case 'Uruguay':
-    	      m.centerzoom({ lat: -33, lon: -60 }, 7, false);
-              selectDescription('URY');
-              initLayerSwitcher(['URY', 'REGIONAL']);
-	    break;
-	    case 'Venezuela':
-    	      m.centerzoom({ lat: 7.6, lon: -73 }, 6, false);
-              selectDescription('VEN');
-              initLayerSwitcher(['VEN', 'REGIONAL']);
+            case 'Bayonne, France':
+    	      m.centerzoom({ lat: 43.43, lon: -1.7 }, 12, true);
+              selectDescription('FRA-bayonne');
+              initLayerSwitcher(['FRA-bayonne', 'WORLD']);
 	    break;
 	    case 'El Dorado, Site 1, Argentina':
     	      m.centerzoom({ lat: -33.563, lon: -66.09 }, 17, false);
@@ -288,156 +196,6 @@ $(function() {
               selectDescription('ARG-eldorado');
               initLayerSwitcher(['ARG-eldorado']);
 	    break;
-            case 'Tequila, Mexico':
-    	      m.centerzoom({ lat: 20.7760, lon: -103.6692 }, 14, false);
-              selectDescription('MEX-tequila');
-              initLayerSwitcher(['MEX-tequila']);
-	    break;
-            case 'Tequila, Ref., Mexico':
-    	      m.centerzoom({ lat: 20.7720, lon: -103.6605}, 17, false);
-              selectDescription('MEX-tequila-ref');
-              initLayerSwitcher(['MEX-tequila-ref']);
-	    break;
-	    case 'Tequila, Eros., Mexico':
-    	      m.centerzoom({ lat: 20.7753, lon: -103.6781}, 17, false);
-              selectDescription('MEX-tequila-eros');
-              initLayerSwitcher(['MEX-tequila-eros']);
-	    break;
-	    case 'Tequila, Sedi., Mexico':
-    	      m.centerzoom({ lat: 20.7797, lon: -103.6799}, 17, false);
-              selectDescription('MEX-tequila-sedi');
-              initLayerSwitcher(['MEX-tequila-sedi']);
-	    break;
-            case 'Caracas, Venezuela':
-    	      m.centerzoom({ lat: 10.4955, lon: -66.8942}, 17, false);
-              selectDescription('VEN-caracas');
-              initLayerSwitcher(['VEN-caracas']);
-	    break;
-	    case 'Caracas, Ref., Venezuela':
-    	      m.centerzoom({ lat: 10.4964, lon: -66.8925}, 18, false);
-              selectDescription('VEN-caracas-ref');
-              initLayerSwitcher(['VEN-caracas-ref']);
-	    break;
-	    case 'Caracas, Eros., Venezuela':
-    	      m.centerzoom({ lat: 10.4942 , lon: -66.8926}, 18, false);
-              selectDescription('VEN-caracas-eros');
-              initLayerSwitcher(['VEN-caracas-eros']);
-	    break;
-	    case 'Caracas, Depo., Venezuela':
-    	      m.centerzoom({ lat: 10.4960, lon: -66.8959}, 18, false);
-              selectDescription('VEN-caracas-depo');
-              initLayerSwitcher(['VEN-caracas-depo']);
-	    break;
-	    case 'La Presa, El Salvador':
-    	      m.centerzoom({ lat: 13.8165, lon: -89.5049}, 15, false);
-              selectDescription('SLV-la-presa');
-              initLayerSwitcher(['SLV-la-presa']);
-	    break;
-	    case 'La Presa, Ref., El Salvador':
-    	      m.centerzoom({ lat: 13.8211, lon: -89.5048}, 17, false);
-              selectDescription('SLV-la-presa-ref');
-              initLayerSwitcher(['SLV-la-presa-ref']);
-	    break;
-	    case 'La Presa, Mues., El Salvador':
-    	      m.centerzoom({ lat: 13.8110, lon: -89.5052}, 17, false);
-              selectDescription('SLV-la-presa-mues');
-              initLayerSwitcher(['SLV-la-presa-mues']);
-	    break;
-	    case 'Atlantida, Uruguay':
-    	      m.centerzoom({ lat: -34.7001, lon: -55.7688}, 16, false);
-              selectDescription('URY-atlantida');
-              initLayerSwitcher(['URY-atlantida']);
-	    break;
-	    case 'Atlantida, Ref., Uruguay':
-    	      m.centerzoom({ lat: -34.7021, lon: -55.7655}, 19, false);
-              selectDescription('URY-atlantida-ref');
-              initLayerSwitcher(['URY-atlantida-ref']);
-	    break;
-	    case 'Atlantida, Mt., Uruguay':
-    	      m.centerzoom({ lat: -34.7019, lon: -55.766}, 19, false);
-              selectDescription('URY-atlantida-mt');
-              initLayerSwitcher(['URY-atlantida-mt']);
-	    break;
-	    case 'Atlantida, Agr., Uruguay':
-    	      m.centerzoom({ lat: -34.6981, lon: -55.7717}, 18, false);
-              selectDescription('URY-atlantida-agr');
-              initLayerSwitcher(['URY-atlantida-agr']);
-	    break;
-	    case 'Inquisivi, Bolivia':
-    	      m.centerzoom({ lat: -16.9766, lon: -67.109}, 14, false);
-              selectDescription('BOL-inquisivi');
-              initLayerSwitcher(['BOL-inquisivi']);
-	    break;
-	    case 'Los Pinos, Chile':
-    	      m.centerzoom({ lat: -39.7340, lon: -73.1763}, 18, false);
-              selectDescription('CHL-los-pinos');
-              initLayerSwitcher(['CHL-los-pinos']);
-	    break;
-	    case 'Consolation, Cuba':
-    	      m.centerzoom({ lat: 22.5177, lon: -83.4752}, 16, false);
-              selectDescription('CUB-consolation');
-              initLayerSwitcher(['CUB-consolation']);
-	    break;
-	    case 'Consolation, Ref., Cuba':
-    	      m.centerzoom({ lat: 22.5215, lon: -83.4767}, 17, false);
-              selectDescription('CUB-consolation-ref');
-              initLayerSwitcher(['CUB-consolation-ref']);
-	    break;
-	    case 'Consolation, Estudio, Cuba':
-    	      m.centerzoom({ lat: 22.5139, lon: -83.4733}, 17, false);
-              selectDescription('CUB-consolation-estu');
-              initLayerSwitcher(['CUB-consolation-estu']);
-	    break;
-	    case 'El Cristal, Nicaragua':
-    	      m.centerzoom({ lat: 12.5571, lon: -85.9451}, 16, false);
-              selectDescription('NIC-el-cristal');
-              initLayerSwitcher(['NIC-el-cristal']);
-	    break;
-	    case 'El Cristal, Ref., Nicaragua':
-    	      m.centerzoom({ lat: 12.5544, lon: -85.9447}, 18, false);
-              selectDescription('NIC-el-cristal-ref');
-              initLayerSwitcher(['NIC-el-cristal-ref']);
-	    break;
-	    case 'El Cristal, Estudio, Nicaragua':
-    	      m.centerzoom({ lat: 12.5594, lon: -85.9457}, 18, false);
-              selectDescription('NIC-el-cristal-estu');
-              initLayerSwitcher(['NIC-el-cristal-estu']);
-	    break;
-	    case 'Blue montains, Jamaica':
-    	      m.centerzoom({ lat: 18.0726, lon: -76.6615}, 13, false);
-              selectDescription('JAM-blue-mountains');
-              initLayerSwitcher(['JAM-blue-mountains']);
-	    break;
-	    case 'Cuenca Nizao, Dominican Rep.':
-    	      m.centerzoom({ lat: 18.5756, lon: -70.3845}, 14, false);
-              selectDescription('DOM-cuenca');
-              initLayerSwitcher(['DOM-cuenca']);
-	    break;
-	    case 'Serra Tiririca, Brazil':
-    	      m.centerzoom({ lat: -22.9135, lon: -42.9754}, 13, false);
-              selectDescription('BRA-tiri');
-              initLayerSwitcher(['BRA-tiri']);
-	    break;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 	  }

@@ -102,7 +102,8 @@ input, textarea, select {
   padding: 17px 0px 0px 10px;
   color: #C1B596;
   color: #C1B596;
-  font-size: 33px;
+  color: #C1B596;
+  font-size: 27px;
   /*font-weight: bold;*/
   /*color: #CAD2E1;*/
   /*color: #BFBFBF;*/
@@ -117,7 +118,7 @@ input, textarea, select {
   color: #426C92; 
   color: #FFF; 
   color: #C1B596;
-  font-size: 32px;
+  font-size: 27px;
   font-weight: normal;
   text-shadow: 1px 1px 2px rgba(255,255,225,0.5);
 }

@@ -2,7 +2,7 @@
 title: Regional ARCAL RLA 5/051 study sites
 categories: 
     - data
-geography: REGIONAL
+geography: WORLD
 status: default
 default-position: 1
 layer: geoportal-arcal.REGIONAL-sites-2011-11-07
