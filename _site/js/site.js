@@ -172,9 +172,9 @@ $(function() {
               initLayerSwitcher(['WORLD']);
 	    break;
             case 'Japan':
-    	      m.centerzoom({ lat: 38.44, lon: 130 }, 5, true);
+    	      m.centerzoom({ lat: 37, lon: 132 }, 6, true);
               selectDescription('JPN');
-              initLayerSwitcher(['JPN', 'WORLD']);
+              initLayerSwitcher(['JPN']);
 	    break;
 	    case 'Vienna, Austria':
     	      m.centerzoom({ lat: 48.14, lon: 16.1 }, 11, true);
@@ -187,17 +187,15 @@ $(function() {
               initLayerSwitcher(['FRA-bayonne', 'WORLD']);
 	    break;
 	    case 'El Dorado, Site 1, Argentina':
-    	      m.centerzoom({ lat: -33.563, lon: -66.09 }, 17, false);
+    	      m.centerzoom({ lat: -33.563, lon: -66.09 }, 17, true);
               selectDescription('ARG-eldorado-site1');
               initLayerSwitcher(['ARG-eldorado-site1']);
 	    break;
 	    case 'El Dorado, Argentina':
-    	      m.centerzoom({ lat: -33.535, lon: -66.13 }, 13, false);
+    	      m.centerzoom({ lat: -33.535, lon: -66.13 }, 13, true);
               selectDescription('ARG-eldorado');
               initLayerSwitcher(['ARG-eldorado']);
 	    break;
-
-
 	  }
         }
       });
