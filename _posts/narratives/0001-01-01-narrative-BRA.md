@@ -1,8 +1,0 @@
----
-categories: 
-    - narrative
-geography: BRA
-published: true
----
-
-<p style="text-align: justify; "><i>Brazil</i>, officially the Federative Republic of Brazil, is the largest country in South America and in the Latin America region. It is the world's fifth largest country, both by geographical area and by population with over 200 million people. It is the largest Lusophone country in the world, and the only one in the Americas. </p>

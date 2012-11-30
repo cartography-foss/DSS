@@ -1,8 +1,0 @@
----
-categories: 
-    - narrative
-geography: URY-atlantida-ref
----
-
-Zona alta cercana a Zona Forestal donde no existe signos de utilizacion de la tierra. Los habitantes locales nos informaron que no recuerdan si alguna vez esa tierra fue utilizada.
-Área total 12 metros X 50 metros (0,06 hectáreas)
